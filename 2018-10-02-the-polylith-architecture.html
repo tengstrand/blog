@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>The Polylith architecture</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="application/atom+xml" rel="alternate" href="atom.xml" title="The Polylith architecture">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-clojure.min.js"></script>
+    <script type="text/javascript" src="https://livejs.com/live.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism.min.css">
+
+
+
+    <!-- Social sharing (Facebook, Twitter, LinkedIn, etc.) -->
+    <meta name="title" content="The Polylith architecture">
+    <meta name="twitter:title" content="The Polylith architecture">
+    <meta property="og:title" content="The Polylith architecture">
+    <meta property="og:type" content="website">
+
+
+    <meta name="twitter:url" content="https://tengstrand.github.io/blog/2018-10-02-the-polylith-architecture.html">
+    <meta property="og:url" content="https://tengstrand.github.io/blog/2018-10-02-the-polylith-architecture.html">
+
+
+    <meta name="twitter:card" content="summary">
+
+
+
+  </head>
+  <body>
+
+    <div class="site-header">
+      <div class="wrapper">
+        <div class="site-nav">
+          <a class="page-link" href="archive.html">Archive</a>
+          <a class="page-link" href="tags/index.html">Tags</a>
+          
+	  <a class="page-link" href="atom.xml">
+            Feed
+          </a>
+	  
+	  
+        </div>
+        <div class="site-header-content">
+          <img src="assets/summer.jpeg" alt="Summer" class="site-header-image">
+          <div class="site-header-text">
+            <h1 class="site-title">
+              <a class="page-link" href="index.html">Tengstrand&#39;s Blog</a>
+            </h1>
+	    <p>The search for simpler code while having fun.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper">
+
+      <h1>
+  
+  The Polylith architecture
+  
+</h1>
+<div><img src="assets/2018-10-02-the-polylith-architecture/polylith-text-and-logo.webp" alt="Polylith architecture logo" style="width: 400px; max-width: 100%; display: block; margin: 30px 0;" /><p>Today I’m proud to announce a new software architecture, called Polylith!</p><p>I hope that Polylith can have a positive affect on the software industry, by focusing on simplicity and developer happiness and efficiency.</p><p>Let’s start from the beginning. Two years ago I finally had the chance to work full time with the functional language <a href="https://en.wikipedia.org/wiki/Clojure">Clojure</a> and the functional database <a href="https://www.datomic.com/">Datomic</a>. I had read a book, blogged and played around with the language for a while, but now it was time to leave 20 years of Java behind me.</p><p>I joined a small team with one developer, a team leader and a UX designer. Even though only the team leader and I had any previous experience with Clojure and very little experience with Datomic, the whole team was up and running quickly and very soon became a hyper productive Dream Team!</p><p>A fantastic thing about Clojure is its <a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop">REPL</a>. It allows you to work much faster compared to “up front” compiled languages like Java. Instead, it compiles the code incrementally. The result is lightning fast feedback, where you have direct access to all your data and compiled code. Once you have tried it, you will never look back!</p><p>After a month I questioned why we still had a Microservices architecture. It slowed us down because we now had a bunch of <a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop">REPL</a>s instead of just one, and it also added a lot of boilerplate code and unnecessary complexity.</p><p>One morning on the train to work I got that eureka moment that you may get once in a lifetime. I realised that the solution was to turn the development environment into a monolith using <a href="https://en.wikipedia.org/wiki/Symbolic_link">symbolic links</a><sup id="fnref:1"><a href="#fn:1" class="footnote-ref">1</a></sup> to each &quot;component&quot;! This little trick worked out well and now we had our single REPL back again!</p><div class="image-with-caption" style="max-width: 600px;">
+<img src="assets/2018-10-02-the-polylith-architecture/polylith-building-blocks.webp" alt="The three building blocks of Polylith">
+<small class="image-caption">The three building blocks of Polylith</small>
+</div><p style="margin-top: 30px;"/><p>Two years have passed and we still love this way of designing systems. The components have become our friends that are easy to understand, reuse and combine into deployable systems. The <a href="https://github.com/polyfy/polylith">tool</a> helps us test and build our systems incrementally both locally and on the continuous integration server.</p><p>It’s not just efficient and fun, it has changed the way we think about design at the system level.</p><p>If this has made you curious, then head over to our <a href="https://polylith.gitbook.io/">high-level documentation</a> to find out more.</p><p>Happy coding!</p><p>Joakim Tengstrand</p><div class="footnotes">
+<ol>
+<li id="fn:1">
+<p>
+Since October 2020, the new <a href="https://github.com/polyfy/polylith">poly command line tool</a> uses <a href="https://clojure.org/guides/deps_and_cli">tools.deps</a> instead of <a href="https://en.wikipedia.org/wiki/Symbolic_link">symbolic links</a>. <a href="#fnref:1" class="footnote-backref">↩</a>
+</p>
+</li>
+</ol>
+</div></div>
+
+<p><i>Published: 2018-10-02</i></p>
+
+<p>
+  <i>
+  Tagged:
+  
+  <span class="tag">
+    <a href="tags/architecture.html">architecture</a>
+  </span>
+  
+  <span class="tag">
+    <a href="tags/clojure.html">clojure</a>
+  </span>
+  
+  <span class="tag">
+    <a href="tags/polylith.html">polylith</a>
+  </span>
+  
+  </i>
+</p>
+
+
+
+      
+      <div style="margin-bottom: 20px; float: right;">
+        <a class="page-link" href="archive.html">Archive</a>
+      </div>
+      
+    </div>
+  </body>
+</html>
