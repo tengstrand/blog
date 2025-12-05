@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Tengstrand's Blog</title>
-  <link href="https://tengstrand.github.io/quickblog/atom.xml" rel="self"/>
-  <link href="https://tengstrand.github.io/quickblog/"/>
-  <updated>2025-12-05T17:50:17+00:00</updated>
-  <id>https://tengstrand.github.io/quickblog/</id>
+  <link href="https://tengstrand.github.io/blog/atom.xml" rel="self"/>
+  <link href="https://tengstrand.github.io/blog/"/>
+  <updated>2025-12-05T17:58:33+00:00</updated>
+  <id>https://tengstrand.github.io/blog/</id>
   <author>
     <name>Joakim Tengstrand</name>
   </author>
   <entry>
-    <id>https://tengstrand.github.io/quickblog/2019-09-14-the-origin-of-complexity.html</id>
-    <link href="https://tengstrand.github.io/quickblog/2019-09-14-the-origin-of-complexity.html"/>
+    <id>https://tengstrand.github.io/blog/2019-09-14-the-origin-of-complexity.html</id>
+    <link href="https://tengstrand.github.io/blog/2019-09-14-the-origin-of-complexity.html"/>
     <title>The origin of complexity</title>
     <updated>2019-09-14T23:59:59+00:00</updated>
     <content type="html"><![CDATA[<div><img src="assets/2019-09-14-the-origin-of-complexity/gordian-knot.webp" alt="A golden Gordian knot symbolizing the intertwined nature of complexity" style="width: 30%; max-width: 600px; height: auto;"><p>Writing software is hard.</p><p>There are so many things to deal with, so many moving parts and things that can go wrong that it is easy to get lost. It&apos;s not only about building the <em>right thing</em>, but also about building the <em>thing right</em>.</p><p>As a reaction to that, the list of tips on how to best develop software has constantly grown over the years. Sometimes the tips have been quite helpful but others have been contradictory.</p><!-- end-of-preview --><p>We have learned to not repeat ourselves, avoid mutable state, use pure functions, use interfaces, use polymorphism, prefer composition, use declarative style, avoid temporal coupling, work in small teams, make small commits, avoid long lived branches, test our code, and so on.</p><p>But wouldn&apos;t it be great if we could find one single, simple principle, that is easy to understand and that helps us to reason about software?</p><p>Let&apos;s rewrite the list and add <em>why</em> to get a hint:</p><ul><li><em>Don&apos;t repeat yourself</em> — because that adds coordination</li><li><em>Make it small</em> — because that reduces coordination</li><li><em>Avoid mutable state</em> — because it adds coordination</li><li><em>Use pure functions</em> — because they reduce coordination</li><li><em>Use interfaces</em> — because they reduce coordination</li><li><em>Use polymorphism</em> — because it reduces coordination</li><li><em>Prefer composition</em> — because it reduces coordination</li><li><em>Use declarative style</em> — because it reduces coordination</li><li><em>Avoid temporal coupling</em> — because it introduces coordination</li><li><em>Work in small teams</em> — because it reduces coordination</li><li><em>Make small commits</em> — because it reduces coordination</li><li><em>Avoid long lived branches</em> — because they increase coordination</li><li><em>Test your code</em> — to catch coordination that wasn&apos;t done correctly!</li></ul><p>As you can see, it&apos;s all about <em>coordination</em>!</p><p>Now you may think, what&apos;s wrong with coordination?</p><p>The problem with coordination is that it <em>adds complexity</em> to our systems which make them harder to change and work with. Let&apos;s look at an example.</p><p>Here we have inserted a heading in a simple text editor:</p><pre style="font-family: 'Courier New', Courier, monospace; font-size: 1.1em;">My heading
