@@ -82,6 +82,26 @@ p {
   line-height: 4rem;
 }
 
+@media (max-width: 600px) {
+  .site-nav {
+    float: none;
+    line-height: 2rem;
+    margin-bottom: 10px;
+    text-align: right;
+  }
+  
+  .site-header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .site-header-image {
+    width: 100px;
+    height: 100px;
+  }
+}
+
 .site-nav .page-link:not(:last-child) {
   margin-right: 20px;
 }
