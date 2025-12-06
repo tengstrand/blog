@@ -135,7 +135,7 @@ p {
   }
   
   .tags-page ul.index li span a {
-    font-size: 1em !important;
+    font-size: inherit !important;
     display: inline-block;
   }
 }
