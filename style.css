@@ -130,8 +130,9 @@ p {
     font-size: 0.9em !important;
   }
   
-  .tags-page ul.index a {
-    font-size: 0.85em !important;
+  .tags-page ul.index li span a {
+    font-size: 0.6em !important;
+    display: inline-block;
   }
 }
 
