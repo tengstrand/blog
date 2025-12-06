@@ -70,6 +70,15 @@ p {
   font-size: 1.5em;
 }
 
+/* Tags page styling */
+.tags-page h1 {
+  font-size: 1.2em;
+}
+
+.tags-page ul.index {
+  font-size: 0.9em;
+}
+
 .site-header-content {
   display: flex;
   align-items: center;
