@@ -129,6 +129,10 @@ p {
   .tags-page ul.index {
     font-size: 0.9em !important;
   }
+  
+  .tags-page ul.index a {
+    font-size: 0.85em !important;
+  }
 }
 
 .site-nav .page-link:not(:last-child) {
