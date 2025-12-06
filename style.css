@@ -131,11 +131,11 @@ p {
   }
   
   .tags-page ul.index li {
-    font-size: 0.7em !important;
+    font-size: 0.65em !important;
   }
   
   .tags-page ul.index li span a {
-    font-size: 1.1em !important;
+    font-size: 1em !important;
     display: inline-block;
   }
 }
