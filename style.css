@@ -102,7 +102,7 @@ p {
   line-height: 4rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .site-nav {
     float: none;
     line-height: 2rem;
@@ -135,7 +135,7 @@ p {
   }
   
   .tags-page ul.index li span a {
-    font-size: 1.0em !important;
+    font-size: inherit !important;
     display: inline-block;
   }
 }
