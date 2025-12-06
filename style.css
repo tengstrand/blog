@@ -127,15 +127,15 @@ p {
   }
   
   .tags-page ul.index {
-    font-size: 0.9em !important;
+    font-size: 1.0em !important;
   }
   
-  .tags-page ul.index li {
-    font-size: 0.65em !important;
+  .tags-page ul.index li span {
+    font-size: 1.0em !important;
   }
   
   .tags-page ul.index li span a {
-    font-size: inherit !important;
+    font-size: 1.0em !important;
     display: inline-block;
   }
 }
