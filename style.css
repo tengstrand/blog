@@ -72,11 +72,11 @@ p {
 
 /* Tags page styling */
 .tags-page h1 {
-  font-size: 1.2em;
+  font-size: 1.2em !important;
 }
 
 .tags-page ul.index {
-  font-size: 0.9em;
+  font-size: 0.9em !important;
 }
 
 .site-header-content {
@@ -119,6 +119,15 @@ p {
   .site-header-image {
     width: 100px;
     height: 100px;
+  }
+  
+  /* Tags page styling on mobile */
+  .tags-page h1 {
+    font-size: 1.2em !important;
+  }
+  
+  .tags-page ul.index {
+    font-size: 0.9em !important;
   }
 }
 
