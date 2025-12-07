@@ -10,6 +10,8 @@ body {
   overflow-x: hidden;
   width: 100%;
   box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 html {
@@ -82,7 +84,9 @@ p {
 }
 
 .tags-page ul.index {
-  font-size: 0.9em !important;
+  font-size: 12.6px !important;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 .site-header-content {
