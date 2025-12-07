@@ -65,6 +65,12 @@ p {
   position: relative;
 }
 
+.site-header .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
 .site-title {
   margin: 0;
   font-size: 2em;
@@ -83,7 +89,9 @@ p {
   display: flex;
   align-items: center;
   gap: 20px;
-  padding: 20px 0;
+  padding: 0;
+  padding-bottom: 20px;
+  order: 2;
 }
 
 .site-header-image {
@@ -98,8 +106,20 @@ p {
 }
 
 .site-nav {
-  float: right;
-  line-height: 4rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  line-height: 1.5;
+  margin: 0;
+  margin-top: 20px;
+  padding: 0;
+  padding-bottom: 0;
+  order: 1;
+}
+
+.site-nav .page-link {
+  color: #424242;
 }
 
 @media (max-width: 768px) {
