@@ -122,46 +122,8 @@ p {
   color: #424242;
 }
 
-@media (max-width: 768px) {
-  .site-nav {
-    float: none;
-    line-height: 2rem;
-    margin-bottom: 10px;
-    text-align: right;
-  }
-  
-  .site-header-content {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-  }
-  
-  .site-header-image {
-    width: 100px;
-    height: 100px;
-  }
-  
-  /* Tags page styling on mobile */
-  .tags-page h1 {
-    font-size: 1.2em !important;
-  }
-  
-  .tags-page ul.index {
-    font-size: 1.0em !important;
-  }
-  
-  .tags-page ul.index li span {
-    font-size: 1.0em !important;
-  }
-  
-  .tags-page ul.index li span a {
-    font-size: inherit !important;
-    display: inline-block;
-  }
-}
-
 .site-nav .page-link:not(:last-child) {
-  margin-right: 20px;
+  margin-right: 0;
 }
 
 .page-link {
