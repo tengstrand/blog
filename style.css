@@ -74,7 +74,7 @@ p {
 .site-header .wrapper {
   display: flex;
   flex-direction: column;
-  gap: 6.5px;
+  gap: 15px;
 }
 
 .site-title {
