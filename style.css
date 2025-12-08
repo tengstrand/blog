@@ -19,14 +19,14 @@ html {
   width: 100%;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   color: rgba(41, 41, 41, 1);
 }
 
 h1 {
-  font-size: 1.75em;
+  font-size: 1.6em;
   margin-top: 0;
 }
 
@@ -35,7 +35,11 @@ h2 {
 }
 
 h3 {
-  font-size: 1.25em;
+  font-size: 1.4em;
+}
+
+h4 {
+  font-size: 1.3em;
 }
 
 a {
@@ -75,7 +79,7 @@ p {
 
 .site-title {
   margin: 0;
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 /* Tags page styling */
