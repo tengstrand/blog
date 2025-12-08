@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Stats</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="application/atom+xml" rel="alternate" href="atom.xml" title="Stats">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/components/prism-clojure.min.js"></script>
+    <script type="text/javascript" src="https://livejs.com/live.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism.min.css">
+
+
+
+    <!-- Social sharing (Facebook, Twitter, LinkedIn, etc.) -->
+    <meta name="title" content="Stats">
+    <meta name="twitter:title" content="Stats">
+    <meta property="og:title" content="Stats">
+    <meta property="og:type" content="website">
+
+
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="assets/summer.jpeg">
+    <meta property="og:image" content="assets/summer.jpeg">
+    <meta property="og:image:alt" content="Summer">
+
+
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M04G8Y5PWB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-M04G8Y5PWB');
+    </script>
+  </head>
+  <body>
+
+    <div class="site-header">
+      <div class="wrapper">
+        <div class="site-nav">
+          <a class="page-link" href="index.html">Home</a>
+          <a class="page-link" href="archive.html">Archive</a>
+          <a class="page-link" href="tags/index.html">Tags</a>
+          <a class="page-link" href="visitors.html">Stats</a>
+          
+	  <a class="page-link" href="atom.xml">
+            Feed
+          </a>
+          
+          
+        </div>
+        <div class="site-header-content">
+          <img src="assets/summer.jpeg" alt="Summer" class="site-header-image">
+          <div class="site-header-text">
+            <h1 class="site-title">
+              <a class="page-link" href="index.html">Tengstrand&#39;s Blog</a>
+            </h1>
+            <p>The search for simpler code while having fun.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper">
+
+      <div class="visitors-page">    
+    <div class="visitors-by-post">
+        <h2>Visitors</h2>
+        <ul class="visitors-list" id="visitors-list">
+            
+            <li>
+                <a href="2023-11-01-understanding-polylith-through-the-lens-of-hexagonal-architecture.html" style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
+                    
+                    <img src="assets/2023-11-01-understanding-polylith-through-the-lens-of-hexagonal-architecture/glasses.webp" alt="Understanding Polylith through the lens of Hexagonal Architecture" class="visitor-icon" />
+                    
+                    <span style="flex: 1;">Understanding Polylith through the lens of Hexagonal Architecture</span>
+                    <span class="count" data-post-url="2023-11-01-understanding-polylith-through-the-lens-of-hexagonal-architecture.html">Loading...</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="2019-09-14-the-origin-of-complexity.html" style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
+                    
+                    <img src="assets/2019-09-14-the-origin-of-complexity/guardian-knot.jpg" alt="The origin of complexity" class="visitor-icon" />
+                    
+                    <span style="flex: 1;">The origin of complexity</span>
+                    <span class="count" data-post-url="2019-09-14-the-origin-of-complexity.html">Loading...</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="2018-10-02-the-polylith-architecture.html" style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
+                    
+                    <img src="assets/2018-10-02-the-polylith-architecture/polylith-logo.png" alt="The Polylith architecture" class="visitor-icon" />
+                    
+                    <span style="flex: 1;">The Polylith architecture</span>
+                    <span class="count" data-post-url="2018-10-02-the-polylith-architecture.html">Loading...</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="2016-12-28-the-micro-monolith-architecture.html" style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
+                    
+                    <img src="assets/2016-12-28-the-micro-monolith-architecture/monolith.webp" alt="The Micro Monolith Architecture" class="visitor-icon" />
+                    
+                    <span style="flex: 1;">The Micro Monolith Architecture</span>
+                    <span class="count" data-post-url="2016-12-28-the-micro-monolith-architecture.html">Loading...</span>
+                </a>
+            </li>
+            
+            <li class="visitors-total-row">
+                <span style="flex: 1; font-weight: 600;">Total visitors</span>
+                <span class="count" id="total-visitors-sum" style="font-weight: 600; color: #4285F4; margin-left: auto;">Loading...</span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+// Google Analytics Data API integration
+// This requires setting up Google Analytics Data API and authentication
+// For a static site, you'll need to use a serverless function or Google Analytics Embed API
+
+document.addEventListener('DOMContentLoaded', function() {
+    // TODO: Replace with actual Google Analytics Data API call
+    // You can use:
+    // 1. Google Analytics Data API (GA4) via serverless function
+    // 2. Google Analytics Embed API (requires OAuth)
+    // 3. A backend service that fetches GA data
+    
+    // Placeholder - replace with actual API integration
+    fetchVisitorData();
+});
+
+async function fetchVisitorData() {
+    try {
+        // Example: Call a serverless function or API endpoint
+        // const response = await fetch('/api/visitors');
+        // const data = await response.json();
+        
+        // For now, using placeholder data
+        // When you implement GA API, replace this with actual data
+        const data = {
+            total: 0,
+            posts: []
+        };
+        
+        updateUI(data);
+    } catch (error) {
+        console.error('Error fetching visitor data:', error);
+        document.getElementById('total-visitors').textContent = 'Error loading data';
+        // Don't replace the list, just show 0 for all posts
+        const listItems = document.querySelectorAll('#visitors-list li .count');
+        listItems.forEach(span => {
+            span.textContent = '0';
+        });
+        // Also update the total sum
+        const totalSumElement = document.getElementById('total-visitors-sum');
+        if (totalSumElement) {
+            totalSumElement.textContent = '0';
+        }
+    }
+}
+
+function updateUI(data) {
+    // Update total visitors
+    const totalElement = document.getElementById('total-visitors');
+    totalElement.textContent = data.total > 0 ? data.total.toLocaleString() : '0';
+    
+    // Update visitor counts for each post and calculate sum
+    // The list is already rendered by the template, we just update the counts
+    const countSpans = document.querySelectorAll('#visitors-list .count[data-post-url]');
+    let totalSum = 0;
+    
+    countSpans.forEach(countSpan => {
+        const postUrl = countSpan.getAttribute('data-post-url');
+        // Find matching post data
+        const postData = data.posts && data.posts.find(p => p.url === postUrl);
+        if (postData) {
+            const visitors = postData.visitors > 0 ? postData.visitors : 0;
+            countSpan.textContent = visitors.toLocaleString();
+            totalSum += visitors;
+        } else {
+            // If no data for this post, show 0
+            countSpan.textContent = '0';
+        }
+    });
+    
+    // Update total visitors sum at the bottom of the list
+    const totalSumElement = document.getElementById('total-visitors-sum');
+    if (totalSumElement) {
+        totalSumElement.textContent = totalSum > 0 ? totalSum.toLocaleString() : '0';
+    }
+}
+</script>
+
+<style>
+.visitors-page {
+    max-width: 600px;
+}
+
+.visitors-summary {
+    margin-bottom: 2em;
+    padding: 1.5em;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+.total-visitors h2 {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: 500;
+    display: flex;
+    align-items: baseline;
+    gap: 0.5em;
+}
+
+.visitor-count {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #4285F4;
+}
+
+.visitors-by-post h2 {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    font-size: 1.3em;
+}
+
+.visitors-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.visitors-list li {
+    padding: 0.8em 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.visitors-list li:nth-last-child(2):not(.visitors-total-row) {
+    border-bottom: none !important;
+}
+
+.visitors-list li.visitors-total-row {
+    border-bottom: none;
+}
+
+.visitors-list a {
+    text-decoration: none;
+    color: rgba(41, 41, 41, 1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.visitors-list a:hover {
+    text-decoration: underline;
+}
+
+.visitors-list a span:first-of-type {
+    flex: 1;
+}
+
+.visitors-list .count {
+    font-weight: 600;
+    color: #4285F4;
+    margin-left: auto;
+}
+
+.visitors-total-row {
+    border-top: 2px solid #e8e8e8;
+    margin-top: 0.5em;
+    padding-top: 0.8em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+
+.visitors-total-row span:first-of-type {
+    flex: 1;
+}
+</style>
+
+
+
+    </div>
+  </body>
+</html>
