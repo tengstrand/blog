@@ -3,7 +3,7 @@
   <title>Tengstrand's Blog</title>
   <link href="https://tengstrand.github.io/blog/atom.xml" rel="self"/>
   <link href="https://tengstrand.github.io/blog/"/>
-  <updated>2025-12-08T17:12:16+00:00</updated>
+  <updated>2025-12-08T17:20:26+00:00</updated>
   <id>https://tengstrand.github.io/blog/</id>
   <author>
     <name>Joakim Tengstrand</name>
@@ -161,7 +161,7 @@ Since October 2020, the new <a href="https://cljdoc.org/d/polylith/clj-poly/CURR
 </li>
 <li id="fn:3">
 <p>
-Today, IDE support is excellent in Clojure, such as <a href="https://cursive-ide.com/userguide/polylith.html">Cursive</a> and <a href="https://calva.io/polylith/">Calva</a>, but there is also support in Python.
+Today, IDE support is excellent in Clojure, such as <a href="https://cursive-ide.com/userguide/polylith.html">Cursive</a> and <a href="https://calva.io/polylith/">Calva</a>, but there is also support in <a href="https://davidvujic.github.io/python-polylith-docs/">Python</a>.
 <a href="#fnref:3" class="footnote-backref">↩</a>
 </p>
 </li>
