@@ -74,7 +74,7 @@ p {
 .site-header .wrapper {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 6.5px;
 }
 
 .site-title {
@@ -206,7 +206,7 @@ blockquote {
 }
 
 .blog-post:first-child h1 {
-  margin-top: 0 !important;
+  margin-top: 0.5em !important;
 }
 
 /* Prevent horizontal scrolling on mobile */
