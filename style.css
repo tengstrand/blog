@@ -85,7 +85,18 @@ p {
 
 .site-title {
   margin: 0;
+  margin-bottom: 0.4em;
   font-size: 1.8em;
+}
+
+.site-title,
+.site-title a {
+  line-height: 1.15;
+}
+
+.site-header-text p {
+  line-height: 1.5;
+  margin-top: 0;
 }
 
 /* Tags page styling */
