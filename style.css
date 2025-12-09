@@ -90,7 +90,7 @@ p {
 
 /* Tags page styling */
 .tags-page h1 {
-  font-size: 1.2em !important;
+  font-size: 1.6em !important;
 }
 
 .tags-page ul.index {
@@ -171,6 +171,39 @@ ul.index {
 
 .index li {
   margin-bottom: 1em;
+}
+
+.tags-page ul.index li {
+  display: block;
+  white-space: nowrap;
+}
+
+.tags-page ul.index li span {
+  display: inline;
+}
+
+.tags-page ul.index li span a {
+  display: inline;
+}
+
+.list-with-icons li a {
+  /* Force consistent alignment regardless of icon size */
+  display: grid !important;
+  grid-template-columns: 32px 1fr;
+  column-gap: 10px;
+  align-items: center;
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.list-with-icons li a img.archive-icon {
+  grid-column: 1;
+  justify-self: start;
+}
+
+.list-with-icons li a span {
+  grid-column: 2;
+  text-align: left;
 }
 
 .archive-icon {
