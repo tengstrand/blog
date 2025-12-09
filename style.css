@@ -66,15 +66,21 @@ p {
 
 .site-header {
   border-top: 2px solid #424242;
-  border-bottom: 1px solid #e8e8e8;
+  border-bottom: none;
   min-height: 55.95px;
   position: relative;
+  width: 100%;
 }
 
 .site-header .wrapper {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .site-title {
@@ -252,4 +258,20 @@ img {
 pre, code {
   max-width: 100%;
   overflow-x: auto;
+}
+
+.sticky-nav-wrapper {
+  border-bottom: 1px solid #e8e8e8 !important;
+  border-top: none !important;
+  box-shadow: none !important;
+}
+
+.sticky-nav-wrapper .site-nav {
+  margin-top: 0 !important;
+  padding-top: 5px !important;
+}
+
+/* Hide site-header border-top when sticky nav is active */
+body:has(.sticky-nav-wrapper) .site-header {
+  border-top: none !important;
 }
