@@ -224,8 +224,8 @@ The Micro Monolith architecture has been replaced by the <a href="https://polyli
           stickyWrapper.style.backgroundColor = 'white';
           stickyWrapper.style.zIndex = '100';
           stickyWrapper.style.boxShadow = 'none';
-          stickyWrapper.style.borderBottom = '1px solid #e8e8e8';
           stickyWrapper.style.borderTop = 'none';
+          stickyWrapper.style.borderBottom = 'none';
           
           // Create inner wrapper for centered content
           var innerWrapper = document.createElement('div');
@@ -236,6 +236,11 @@ The Micro Monolith architecture has been replaced by the <a href="https://polyli
           innerWrapper.style.boxSizing = 'border-box';
           innerWrapper.style.paddingTop = '0px';
           innerWrapper.style.paddingBottom = '2px';
+          innerWrapper.style.borderBottom = '1px solid #e8e8e8';
+          
+          // Add white space below the gray line with a shorter fade
+          stickyWrapper.style.paddingBottom = '8px';
+          stickyWrapper.style.background = 'linear-gradient(to bottom, white 0%, white calc(100% - 8px), transparent 100%)';
           stickyWrapper.appendChild(innerWrapper);
           
           // Clone nav and put it in inner wrapper (always visible)

@@ -261,14 +261,14 @@ pre, code {
 }
 
 .sticky-nav-wrapper {
-  border-bottom: 1px solid #e8e8e8 !important;
+  border-bottom: none !important;
   border-top: none !important;
   box-shadow: none !important;
 }
 
 .sticky-nav-wrapper .site-nav {
   margin-top: 0 !important;
-  padding-top: 5px !important;
+  padding-top: 8px !important;
 }
 
 /* Hide site-header border-top when sticky nav is active */
