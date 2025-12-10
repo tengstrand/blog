@@ -319,3 +319,12 @@ pre, code {
 body:has(.sticky-nav-wrapper) .site-header {
   border-top: none !important;
 }
+
+/* Underline blog post titles on hover */
+.blog-post h1 a {
+  text-decoration: none !important;
+}
+
+.blog-post h1 a:hover {
+  text-decoration: underline !important;
+}
