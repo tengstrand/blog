@@ -122,6 +122,12 @@ p {
   height: 140px;
   border-radius: 8px;
   object-fit: cover;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.site-header-image:hover {
+  opacity: 0.85;
 }
 
 .site-header-text {
@@ -327,4 +333,17 @@ body:has(.sticky-nav-wrapper) .site-header {
 
 .blog-post h1 a:hover {
   text-decoration: underline !important;
+}
+
+/* Make first image in blog posts clickable */
+.blog-post > div > a > img,
+.blog-post > a > img {
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+.blog-post > div > a:hover > img,
+.blog-post > a:hover > img {
+  opacity: 0.85;
 }
