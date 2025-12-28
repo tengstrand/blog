@@ -40,10 +40,12 @@ h3 {
 
 h4 {
   font-size: 1.3em;
+  margin-top: 0.6em;
+  margin-bottom: 0.4em;
 }
 
 a {
-  color: rgba(41, 41, 41, 1);
+  color: #003366;
   text-decoration: underline;
 }
 
@@ -153,8 +155,8 @@ p {
 
 .site-nav .page-link:not(:last-child) {
   margin-right: 0;
-}
-
+  }
+  
 .site-nav-bottom {
   display: flex;
   flex-direction: row;
@@ -240,9 +242,14 @@ ul.index {
 code {
   white-space: pre;
   font-family: "Courier New", Courier, monospace;
-  font-size: 0.85em;
+  font-size: 0.9em;
+  font-weight: 600;
+  line-height: 0.95;
+}
+
+/* Keep code blocks bold */
+pre code {
   font-weight: bold;
-  line-height: 0.9;
 }
 
 pre {
@@ -270,6 +277,123 @@ pre[class*="language-"] {
 pre[class*="language-"],
 pre code[class*="language-"] {
   background-color: #f5f5f5 !important;
+}
+
+/* Light theme for Clojure code blocks - inspired by One Light with high readability */
+pre[class*="language-clojure"],
+pre code[class*="language-clojure"] {
+  background-color: #f5f5f5 !important;
+  color: #383a42 !important;
+}
+
+pre[class*="language-clojure"] code,
+pre code[class*="language-clojure"] {
+  background-color: transparent !important;
+  color: #383a42 !important;
+}
+
+/* Clojure syntax highlighting - clear, readable colors */
+pre[class*="language-clojure"] .token.keyword,
+pre code[class*="language-clojure"] .token.keyword {
+  color: #a626a4 !important; /* Purple/magenta */
+  font-weight: 600;
+}
+
+pre[class*="language-clojure"] .token.string,
+pre code[class*="language-clojure"] .token.string {
+  color: #50a14f !important; /* Green */
+}
+
+pre[class*="language-clojure"] .token.function,
+pre code[class*="language-clojure"] .token.function {
+  color: #4078f2 !important; /* Blue */
+}
+
+pre[class*="language-clojure"] .token.number,
+pre code[class*="language-clojure"] .token.number {
+  color: #50a14f !important; /* Green - same as strings */
+}
+
+pre[class*="language-clojure"] .token.comment,
+pre code[class*="language-clojure"] .token.comment {
+  color: #a0a1a7 !important; /* Gray */
+  font-style: italic;
+}
+
+pre[class*="language-clojure"] .token.operator,
+pre code[class*="language-clojure"] .token.operator {
+  color: #0184bc !important; /* Cyan/blue */
+}
+
+pre[class*="language-clojure"] .token.punctuation,
+pre code[class*="language-clojure"] .token.punctuation {
+  color: #383a42 !important; /* Dark gray */
+}
+
+pre[class*="language-clojure"] .token.boolean,
+pre code[class*="language-clojure"] .token.boolean {
+  color: #0184bc !important; /* Cyan/blue */
+}
+
+pre[class*="language-clojure"] .token.symbol,
+pre code[class*="language-clojure"] .token.symbol {
+  color: #383a42 !important; /* Dark gray */
+}
+
+/* Light theme for Python code blocks - same colors as Clojure for consistency */
+pre[class*="language-python"],
+pre code[class*="language-python"] {
+  background-color: #f5f5f5 !important;
+  color: #383a42 !important;
+}
+
+pre[class*="language-python"] code,
+pre code[class*="language-python"] {
+  background-color: transparent !important;
+  color: #383a42 !important;
+}
+
+/* Python syntax highlighting - same colors as Clojure */
+pre[class*="language-python"] .token.keyword,
+pre code[class*="language-python"] .token.keyword {
+  color: #a626a4 !important; /* Purple/magenta */
+  font-weight: 600;
+}
+
+pre[class*="language-python"] .token.string,
+pre code[class*="language-python"] .token.string {
+  color: #50a14f !important; /* Green */
+}
+
+pre[class*="language-python"] .token.function,
+pre code[class*="language-python"] .token.function {
+  color: #4078f2 !important; /* Blue */
+}
+
+pre[class*="language-python"] .token.number,
+pre code[class*="language-python"] .token.number {
+  color: #50a14f !important; /* Green - same as strings */
+}
+
+pre[class*="language-python"] .token.comment,
+pre code[class*="language-python"] .token.comment {
+  color: #a0a1a7 !important; /* Gray */
+  font-style: italic;
+}
+
+pre[class*="language-python"] .token.operator,
+pre code[class*="language-python"] .token.operator {
+  color: #0184bc !important; /* Cyan/blue */
+}
+
+pre[class*="language-python"] .token.punctuation,
+pre code[class*="language-python"] .token.punctuation {
+  color: #383a42 !important; /* Dark gray */
+}
+
+pre[class*="language-python"] .token.boolean,
+pre code[class*="language-python"] .token.boolean {
+  color: #0184bc !important; /* Cyan/blue */
 }
 
 blockquote {
