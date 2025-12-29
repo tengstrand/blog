@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Tetris playing AI using Polylith - Part 1</title>
+    <title>Tetris-playing AI the Polylith way - Part 1</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="application/atom+xml" rel="alternate" href="atom.xml" title="Tetris playing AI using Polylith - Part 1">
+    <link type="application/atom+xml" rel="alternate" href="atom.xml" title="Tetris-playing AI the Polylith way - Part 1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -22,9 +22,9 @@
 
 
     <!-- Social sharing (Facebook, Twitter, LinkedIn, etc.) -->
-    <meta name="title" content="Tetris playing AI using Polylith - Part 1">
-    <meta name="twitter:title" content="Tetris playing AI using Polylith - Part 1">
-    <meta property="og:title" content="Tetris playing AI using Polylith - Part 1">
+    <meta name="title" content="Tetris-playing AI the Polylith way - Part 1">
+    <meta name="twitter:title" content="Tetris-playing AI the Polylith way - Part 1">
+    <meta property="og:title" content="Tetris-playing AI the Polylith way - Part 1">
     <meta property="og:type" content="website">
 
 
@@ -81,7 +81,7 @@
 
       <h1>
   
-  Tetris playing AI using Polylith - Part 1
+  Tetris-playing AI the Polylith way - Part 1
   
 </h1>
 <div><img src="assets/2025-12-28-tetris-playing-ai-the-polylith-way/tetris-ai.png" alt="Tetris AI" style="width: 50%; max-width: 220px; height: auto; display: block; margin: 16px 0;"><p>In this blog series, I will show how to work with the <a href="(https://polylith.gitbook.io/polylith/)">Polylith</a> architecture and how organizing code into components helps create a good structure for high-level functional style programming.</p><p>You might feel that organizing into components is unnecessary, and yes, for a tiny codebase like this I would agree. It&apos;s still easy to reason about the code and keep everything in mind, but as the codebase grows, so does the value of this structure, in terms of better overview, clearer system boundaries, and increased flexibility in how these building blocks can be combined into various systems.</p><p>We will get familiar with this by implementing a self-playing <a href="https://en.wikipedia.org/wiki/Tetris">Tetris</a> program in <a href="https://en.wikipedia.org/wiki/Clojure">Clojure</a> and <a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python</a> while reflecting on the differences between the two languages.</p><!-- end-of-preview --><h2 id="the-goal">The goal</h2><p>The task for this first post is to place a <code>T</code> piece on a Tetris board (represented by a two-dimensional array):</p><pre><code class="language-clojure">[[0,0,0,0,0,0,0,0,0,0]
