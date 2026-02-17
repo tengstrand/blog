@@ -88,7 +88,7 @@
   <img src="assets/06-tetris-playing-ai-the-polylith-way/tetris-ai-placed.png" alt="Tetris AI with piece dropped" style="width: calc(50% - 20px); height: auto; display: block;">
   <img src="assets/06-tetris-playing-ai-the-polylith-way/right-arrow.png" alt="Right arrow" style="width: 20px; height: auto; display: block; flex-shrink: 0; margin: 0 10px;">
   <img src="assets/06-tetris-playing-ai-the-polylith-way/tetris-ai-cleared.png" alt="Tetris AI with cleared rows" style="width: calc(50% - 20px); height: auto; display: block;">
-</div><p>The resulting source code from this second blog post in the series can be found here:</p><ul><li>The <a href="https://github.com/tengstrand/tetrisanalyzer/tree/polylith-blog-part-02/langs/clojure/tetris-polylith">Clojure workspace</a></li><li>The <a href="https://github.com/tengstrand/tetrisanalyzer/tree/polylith-blog-part-02/langs/python/tetris-polylith-uv">Python workspace</a></li></ul><h2 id="repl-driven-development">REPL-driven development</h2><p>If you&apos;ve read <a href="2025-12-28-tetris-playing-ai-the-polylith-way-1.html">part one</a> of the blog series, you already know that all code will be implemented in both Python and Clojure, so let&apos;s start with the latter!</p><p>Clojure has something called a <a href="https://clojure.org/guides/repl/introduction">REPL</a> (Read Eval Print Loop) that lets you write code in small steps, while getting quick feedback on whether the code works or not.</p><p>We&apos;ll start by creating a <code>clear-rows</code> namespace in the board component:</p><pre><code class="language-shell">▾ tetris-polylith
+</div><p>The resulting source code from this second blog post in the series can be found here:</p><ul><li>The <a href="https://github.com/tengstrand/tetrisanalyzer/tree/polylith-blog-part-02/langs/clojure/tetris-polylith">Clojure workspace</a></li><li>The <a href="https://github.com/tengstrand/tetrisanalyzer/tree/polylith-blog-part-02/langs/python/tetris-polylith-uv">Python workspace</a></li></ul><h2 id="repl-driven-development">REPL-driven development</h2><p>If you&apos;ve read <a href="05-tetris-playing-ai-the-polylith-way-1.html">part one</a> of the blog series, you already know that all code will be implemented in both Python and Clojure, so let&apos;s start with the latter!</p><p>Clojure has something called a <a href="https://clojure.org/guides/repl/introduction">REPL</a> (Read Eval Print Loop) that lets you write code in small steps, while getting quick feedback on whether the code works or not.</p><p>We&apos;ll start by creating a <code>clear-rows</code> namespace in the board component:</p><pre><code class="language-shell">▾ tetris-polylith
   ▸ bases
   ▾ components
     ▾ board
@@ -296,7 +296,7 @@ def empty_board(width, height):
                                          ;;  [0 0 0 0 0 0 0 0 0 0]
                                          ;;  [1 1 1 1 1 1 1 0 1 1]
                                          ;;  [1 0 1 1 1 1 1 1 1 1]]
-</code></pre><p>To Python:</p><pre><code class="language-python">width = len(board[0])
+</code></pre><p>Till Python:</p><pre><code class="language-python">width = len(board[0])
 height = len(board)
 num_cleared_rows = height - len(remaining_rows) # 2
 empty_rows = empty_board(width, num_cleared_rows) # [[0,0,0,0,0,0,0,0,0,0], [0,0,0,0,0,0,0,0,0,0]]
